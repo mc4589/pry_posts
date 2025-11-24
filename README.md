@@ -1,5 +1,3 @@
-```markdown
-
 # Grupo 2
 
 **Integrantes del equipo:**
