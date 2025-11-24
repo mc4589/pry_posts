@@ -1,3 +1,5 @@
+```markdown
+
 # Grupo 2
 
 **Integrantes del equipo:**
@@ -9,7 +11,7 @@
 - Sergio Condo 
 - Carlos Cantuña 
 
-```markdown
+
 # Microservicio de Publicaciones (Posts) – Laravel 12 + PostgreSQL
 
 **Proyecto:** `PRY_POST_MICROSERVICIO`  
