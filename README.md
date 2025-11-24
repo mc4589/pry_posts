@@ -45,6 +45,7 @@ Gestionar un CRUD completo de publicaciones (posts) con las siguientes reglas:
 protected $fillable = ['title', 'content', 'user_id'];
 public function user() { return $this->belongsTo(User::class); }
 
+```markdown
 ## Estructura Clave
 app/Models/Post.php
 app/Http/Controllers/Api/PostController.php  ← CRUD completo
