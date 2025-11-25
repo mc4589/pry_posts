@@ -32,10 +32,31 @@ class PostController extends Controller
         return response()->json($post->load('user'), 201);
     }
 
-     public function show(Post $post)
+     
+    public function show(Post $post)
     {
         return response()->json($post->load('user'));
     }
+
+
+    public function update(Request $request, Post $post)
+    {
+        $user = $request->attributes->get('auth_user');
+
+        if ($post->user_id !== $user['id']) {
+            return response()->json(['message' => 'No autorizado'], 403);
+        }
+
+        $request->validate([
+            'title'   => 'sometimes|required|string|max:255',
+            'content' => 'sometimes|required|string',
+        ]);
+
+        $post->update($request->only(['title', 'content']));
+
+        return response()->json($post->load('user'));
+    }
+
 
 
 
