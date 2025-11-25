@@ -1,4 +1,4 @@
-# Grupo 2
+# PRY_POSTS – Microservicio de Publicaciones (Posts)
 
 **Integrantes del equipo:**
 
@@ -8,6 +8,20 @@
 - Sandy Mariño
 - Sergio Condo 
 - Carlos Cantuña 
+
+## 📚 Descripción
+
+Este microservicio gestiona las **publicaciones (posts)** del sistema. Está implementado en Laravel y expone una API REST para que otros servicios —por ejemplo, frontend o microservicios relacionados con usuarios— puedan interactuar con las publicaciones.
+
+Se encarga de:
+
+- Crear nuevas publicaciones  
+- Listar todas las publicaciones  
+- Mostrar detalles de una publicación específica  
+- Actualizar publicaciones existentes  
+- Eliminar publicaciones  
+
+Además, garantiza que solo el usuario autor de una publicación pueda modificarla o eliminarla, lo que aporta seguridad a la lógica de negocio.
 
 
 # Microservicio de Publicaciones (Posts) – Laravel 12 + PostgreSQL
