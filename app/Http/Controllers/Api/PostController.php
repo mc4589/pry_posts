@@ -32,5 +32,11 @@ class PostController extends Controller
         return response()->json($post->load('user'), 201);
     }
 
+     public function show(Post $post)
+    {
+        return response()->json($post->load('user'));
+    }
+
+
 
 }
