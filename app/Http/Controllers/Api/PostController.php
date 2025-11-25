@@ -58,6 +58,17 @@ class PostController extends Controller
     }
 
 
+    public function destroy(Request $request, Post $post)
+    {
+        $user = $request->attributes->get('auth_user');
 
+        if ($post->user_id !== $user['id']) {
+            return response()->json(['message' => 'No autorizado'], 403);
+        }
+
+        $post->delete();
+
+        return response()->json(['message' => 'Post eliminado correctamente']);
+    }
 
 }
